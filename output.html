@@ -1,0 +1,72 @@
+---
+layout: default-app
+---
+
+
+<!-- handlebars template -->
+<script type='text/template' id='src'>
+    {% raw %}
+      {{#each cardObjects}}
+      <div class="output-container">
+        <div><h2>{{cardName}}</h2></div>
+        <div class="output-trellolink"><a href="{{cardUrl}}" target="_blank">view on Trello</a></div>
+        <div>{{{cardDesc}}}</div>
+        <div><a href="{{cardWebsite}}" target="_blank">{{cardWebsite}}</a></div>
+        <div><a href="{{cardSource}}" target="_blank">{{cardSource}}</a></div>  
+        </div>
+      {{/each}}
+
+    {% endraw %} 
+</script>
+<script>
+
+    $(document).ready(async function () {
+        //console.log('board id index', boardId);
+        $('#loading-data').show();
+
+        try {
+            let data = await getTrelloAllData();
+            $('#loading-data').hide();
+            //show all the tasks, so they can be filtered for 'incomplete outputs'
+            let transformedData = transformTrelloData(data, { showCompletedCardBountyTasks: true, showPausedCardBountyTasks: true, showPausedBountyTasks: true, showFinishedTasks: true, showAssignedTasks: true });
+            let cards = transformedData.cards;
+            //console.dir(cards)
+            let outputs = [];
+            cards.forEach(card => {
+
+                let showCard;
+                if (card.cardTasks.length > 0) {
+                    if (card.cardWorkType == 'Job') {
+                        showCard = true;
+
+                    }
+                    else {
+                        if (card.cardTasks.filter(ct => ct.taskComplete).length > 0) {
+                            showCard = true;
+
+                        }
+                    }
+                }
+                if (showCard && card.cardRating >=0) { outputs.push(card); }
+            });
+
+            outputs.sort((a, b) => (a.cardRating > b.cardRating) ? -1 : 1)
+            //console.dir(outputs);
+
+
+            var source = $("#src").html();
+            var template = Handlebars.compile(source);
+            $("#output").append(template({ cardObjects: outputs }));
+
+        }
+        catch (e) {
+            $('#loading-data').css("background-color", "red");
+            $('#loading-data').text(`There was an error loading the data: ${e}`);
+            $('#loading-data').show();
+        }
+
+    });
+</script>
+
+<div id="loading-data" style="display:none;">Loading data...</div>
+<div id="output"></div>

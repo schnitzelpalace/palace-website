@@ -1,0 +1,21 @@
+theme: jekyll-theme-hacker
+# Allow future dated posts
+future: true
+title: Schnitzel Palace
+url: "https://schnitzelpalace.io" # the base hostname & protocol for your site
+repoBaseUrl: https://github.com/schnitzelpalace/palace-website 
+plugins:
+  - jekyll-sitemap
+tagline: Get rewards for producing music and managing labels and events on the JMES blockchain
+description: Claim bounties for new ideas, specifying and working on tasks, and carring out QA.
+logo: /assets/image/logo.svg
+twitter:
+  username: palacedao
+  card: summary
+social:
+  name: Schnitzel Palace
+  links:
+    - https://twitter.com/schnitzelpalacedao
+    - https://github.com/schnitzelpalace
+    - https://chat.schnitzelpalace.io
+google_analytics: G-PZE9FSBKDS

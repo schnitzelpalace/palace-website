@@ -1,0 +1,24 @@
+## SETTINGS FOR CONNECTING TO A TRELLO BOARD 
+# Api key for the trello api user
+key : TBC
+# Id of the Trello board
+board: TBC
+# Ids of the Trello Concepts & Archive Lists (to be excluded)
+# retrieve list ids using: https://api.trello.com/1/board/<boardId>/lists?key=<key>
+concepts: TBC #ignore the "Welcome" List 
+archive: TBC 
+# Ids of the Trello Custom Field Ids & Values
+# retreive list ids using: https://api.trello.com/1/board/<boardId>/customFields?key=<key>
+customFieldWorkTypeId: TBC
+customFieldWorkTypeValueProject: TBC
+customFieldWorkTypeValueService: TBC
+customFieldWorkTypeValueJob: TBC
+customFieldSkillsId: TBC
+customFieldPhaseId: TBC
+customFieldLastPhaseId: TBC
+customFieldCompletedId: TBC
+customFieldSourceId: TBC
+customFieldWebsiteId: TBC
+customFieldMetaId: TBC
+customFieldPausedId: TBC
+customFieldRatingId: TBC

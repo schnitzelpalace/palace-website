@@ -1,0 +1,4 @@
+testcolor: yellow
+dao-name: "Crypto Castle"
+body-background: "#151515 url('../images/bkg.png') 0 0"
+header-color: "#704ff7"

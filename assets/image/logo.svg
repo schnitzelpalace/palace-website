@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="72.337158mm"
+   height="44.602757mm"
+   viewBox="0 0 72.337158 44.602757"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="7.326014"
+     inkscape:cx="136.70463"
+     inkscape:cy="84.288674"
+     inkscape:window-width="3440"
+     inkscape:window-height="1440"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <defs
+     id="defs2">
+    <rect
+       x="-1798.7433"
+       y="-2063.5327"
+       width="1195.3152"
+       height="261.41043"
+       id="rect16794" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(339.26804,560.54156)">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.22753964,0,0,0.22753964,-29.804763,-73.65629)"
+       id="text16792"
+       style="font-size:40px;line-height:1.25;font-family:'GFS Didot';-inkscape-font-specification:'GFS Didot';text-align:center;white-space:pre;shape-inside:url(#rect16794);fill:#a1f0c4;fill-opacity:1"
+       x="118.65979"
+       y="0"><tspan
+         x="-1201.0859"
+         y="-2029.6626"
+         id="tspan81529">
+</tspan><tspan
+         x="-1319.8657"
+         y="-1979.6626"
+         id="tspan81531">Crypto Castle</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.5271px;line-height:1.25;font-family:'GFS Didot';-inkscape-font-specification:'GFS Didot';fill:#a1f0c4;fill-opacity:1;stroke-width:0.638179"
+       x="-333.60434"
+       y="-537.4939"
+       id="text77480"><tspan
+         sodipodi:role="line"
+         id="tspan77478"
+         style="fill:#a1f0c4;fill-opacity:1;stroke-width:0.638179"
+         x="-333.60434"
+         y="-537.4939">JMES</tspan></text>
+  </g>
+</svg>

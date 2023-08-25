@@ -1,0 +1,80 @@
+---
+permalink: /bounties
+layout: default-app
+---
+<script>
+
+        $(document).ready(async function () {
+                //console.log('board id index', boardId);
+                $('#loading-data').show();
+
+                try {
+                        let data = await getTrelloAllData();
+                        $('#loading-data').hide();
+                        let lists = transformTrelloData(data).lists;
+                        //parse data to html tables & display
+                        $('#list_project').append(listToTable('production', 'Project', lists.project));
+
+                        //ONLY SHOW PROJECT TYPE TASKS FOR NOW (OTHER TYPES NOT USED/ENABLED IN TRELLO)
+                        /*
+                        $('#list_spec').append(listToTable('spec', 'Specification', lists.spec));
+                        $('#list_service').append(listToTable('service', 'Service', lists.service));
+                        $('#list_job').append(listToTable('job', 'Job', lists.job));
+                        $('#list_qa').append(listToTable('qa', 'QA', lists.qa));
+                        */
+                }
+                catch (e) {
+                        $('#loading-data').css("background-color", "red");
+                        $('#loading-data').text(`There was an error loading the data: ${e}`);
+                        $('#loading-data').show();
+                }
+        });
+</script>
+
+<!--<div style="background:red;margin:20px;padding:10px;text-align:center;">This is a pre-release version: displayed data is for testing purposes only</div>-->
+
+<h1 class="mint-header-center">BOUNTIES</h1>
+
+<p>This is a list of tasks for which bounties are available.
+</p>
+
+<a id="concepts"></a>
+<h2>CONCEPTS</h2>
+<div id="concept-info">
+        <h3>Get rewards for your ideas!</h3>
+        Learn more about <a href="rules.html#31-concepts">creating concepts</a>
+</div>
+<div id="loading-data" style="display:none;">Loading data...</div>
+
+<a id="projects"></a>
+<h2>PROJECTS</h2>
+
+<div id="list_project"></div>
+
+<!--ONLY SHOW PROJECT TYPE TASKS FOR NOW (OTHER TYPES NOT USED/ENABLED IN TRELLO-->
+<!--
+<a id="specifications"></a>
+<h2>SPECIFICATIONS</h2>
+
+<div id="list_spec"></div>
+
+<a id="design"></a>
+<h2>DESIGN</h2>
+
+<div id="list_design"></div>
+
+<a id="services"></a>
+<h2>SERVICES</h2>
+
+<div id="list_service"></div>
+
+<a id="jobs"></a>
+<h2>JOBS</h2>
+
+<div id="list_job"></div>
+
+<a id="qa"></a>
+<h2>QA</h2>
+
+<div id="list_qa"></div>
+-->
